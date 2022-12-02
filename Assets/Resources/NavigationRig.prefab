@@ -85,8 +85,8 @@ MonoBehaviour:
   OwnershipTransfer: 1
   ObservedComponents:
   - {fileID: 873}
-  viewIdField: 1
-  InstantiationId: 1
+  viewIdField: 2
+  InstantiationId: 2
   isRuntimeInstantiated: 0
 --- !u!1 &151
 GameObject:
@@ -106,7 +106,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &454
 Transform:
   m_ObjectHideFlags: 0
@@ -202,9 +202,10 @@ GameObject:
   - component: {fileID: 8394638690496450712}
   - component: {fileID: 4349048798424559730}
   - component: {fileID: 5027926529767813520}
+  - component: {fileID: 2534714287891912644}
   m_Layer: 0
   m_Name: Cursor
-  m_TagString: Untagged
+  m_TagString: cursor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -332,8 +333,8 @@ MonoBehaviour:
   OwnershipTransfer: 1
   ObservedComponents:
   - {fileID: 4349048798424559730}
-  viewIdField: 2
-  InstantiationId: 2
+  viewIdField: 3
+  InstantiationId: 3
   isRuntimeInstantiated: 0
 --- !u!114 &4349048798424559730
 MonoBehaviour:
@@ -362,6 +363,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 880fdbbb41e080ec4b5f6caf94b2aa71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2534714287891912644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1597804166252689987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e77c901ef780e4588b94f18e5f5610, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTriggered: 0
 --- !u!1001 &8865124277278253948
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -485,8 +499,8 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 877}
   - {fileID: 875}
-  viewIdField: 3
-  InstantiationId: 3
+  viewIdField: 4
+  InstantiationId: 4
   isRuntimeInstantiated: 0
 --- !u!114 &877
 MonoBehaviour:

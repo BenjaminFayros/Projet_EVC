@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Arena.unity
     guid: aee0943313087f05596a4804da07d888
+  - enabled: 1
+    path: Assets/ArenaNwen.unity
+    guid: 3e207e02218eb0a4f9091512ba937ca9
   m_configObjects: {}

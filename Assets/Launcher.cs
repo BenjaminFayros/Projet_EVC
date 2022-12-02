@@ -131,7 +131,7 @@ namespace WasaaMP {
                 Debug.Log ("We load the arena") ;
                 // #Critical
                 // Load the Room Level.
-                PhotonNetwork.LoadLevel ("Arena") ;
+                PhotonNetwork.LoadLevel ("ArenaNwen") ;
             }
         }
 
