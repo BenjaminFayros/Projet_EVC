@@ -7,11 +7,11 @@ namespace WasaaMP {
     public class Interactive : MonoBehaviourPun {
 
         private Color colorBeforeHighlight ;
-        private Color oldColor ;
+        protected Color oldColor ;
         private float oldAlpha ;
 
-        private bool catchable = false ;
-        private bool caught = false ;
+        protected bool catchable = false ;
+        protected bool caught = false ;
         void Start () {
             
         }
@@ -20,25 +20,25 @@ namespace WasaaMP {
             
         }
 
-        [PunRPC] public void ShowCaught () {
-            if (! caught) {
-                var rb = GetComponent<Rigidbody> () ;
-                rb.isKinematic = true ;
-                Renderer renderer = GetComponentInChildren <Renderer> () ;
-                oldColor = renderer.material.color ;
-                renderer.material.color = Color.yellow ;
-                caught = true ;
-            }
+        [PunRPC] public virtual void ShowCaught () {
+            // if (! caught) {
+            //     var rb = GetComponent<Rigidbody> () ;
+            //     rb.isKinematic = true ;
+            //     Renderer renderer = GetComponentInChildren <Renderer> () ;
+            //     base.oldColor = renderer.material.color ;
+            //     renderer.material.color = Color.yellow ;
+            //     caught = true ;
+            // }
         }
 
-        [PunRPC] public void ShowReleased () {
-            if (caught) {
-                var rb = GetComponent<Rigidbody> () ;
-                rb.isKinematic = false ;
-                Renderer renderer = GetComponentInChildren <Renderer> () ;
-                renderer.material.color = oldColor ;
-                caught = false ;
-            }
+        [PunRPC] public virtual void ShowReleased () {
+            // if (caught) {
+            //     var rb = GetComponent<Rigidbody> () ;
+            //     rb.isKinematic = false ;
+            //     Renderer renderer = GetComponentInChildren <Renderer> () ;
+            //     renderer.material.color = oldColor ;
+            //     caught = false ;
+            // }
         }
 
         [PunRPC] public void ShowCatchable () {
@@ -68,5 +68,5 @@ namespace WasaaMP {
         }
 
     }
-
+    
 }

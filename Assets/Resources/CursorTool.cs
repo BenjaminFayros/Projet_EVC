@@ -7,6 +7,7 @@ namespace WasaaMP {
 	public class CursorTool : MonoBehaviourPun {
 		private bool caught ;
 		public Interactive interactiveObjectToInstanciate ;
+		public HandleData handleInfo ;
 		private Interactive target ;
 		private MonoBehaviourPun targetParent ;
 		private Transform oldParent = null ;
@@ -30,7 +31,8 @@ namespace WasaaMP {
 			print ("Catch ?") ;
 			if (target != null) {
 				print ("Catch :") ;
-				if ((! caught) && (transform != target.transform)) { // pour ne pas prendre 2 fois l'objet et lui faire perdre son parent
+				if ((! caught) && (transform != target.transform) && (target is InteractiveCube)) { // pour ne pas prendre 2 fois l'objet et lui faire perdre son parent
+					print ("Catch : InteractiveCube") ;
 					oldParent = target.transform.parent ;
 					target.transform.SetParent (transform) ;
 					// target.photonView.RequestOwnership() ;
@@ -39,7 +41,16 @@ namespace WasaaMP {
 					PhotonNetwork.SendAllOutgoingCommands () ;
 					caught = true ;
 				}
-				print ("Catch !") ;
+				if ((! caught) && (transform != target.transform) && (target is InterractiveHandler)) { // pour ne pas prendre 2 fois l'objet et lui faire perdre son 
+					print ("Catch : InterractiveHandler") ;
+					caught = true ;
+					target.photonView.RPC ("ShowCaught", RpcTarget.All) ;
+					oldParent = target.transform.parent ;
+					target.transform.SetParent (transform) ;
+					// target.photonView.RequestOwnership() ;
+					target.photonView.TransferOwnership (PhotonNetwork.LocalPlayer) ;
+					PhotonNetwork.SendAllOutgoingCommands () ;
+				}
 			} else {
 				print ("Catch failed") ;
 			}

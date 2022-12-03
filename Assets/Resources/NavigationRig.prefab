@@ -312,7 +312,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d094e80ff20cc303856e5a582ce6833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactiveObjectToInstanciate: {fileID: 6879852377905633643, guid: 116c34914202e6942b882db06dd87916, type: 3}
+  interactiveObjectToInstanciate: {fileID: 202849349976794166, guid: 116c34914202e6942b882db06dd87916, type: 3}
+  handleInfo: {fileID: 11400000, guid: 7f3e2995821320e4db18a661b16e0c3f, type: 2}
 --- !u!114 &8394638690496450712
 MonoBehaviour:
   m_ObjectHideFlags: 0
