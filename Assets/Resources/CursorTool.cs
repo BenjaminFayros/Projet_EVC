@@ -61,7 +61,7 @@ namespace WasaaMP {
 		}
 
 		void OnTriggerEnter (Collider other) {
-			print(other.gameObject.tag);
+			print($"Cursor Tool trigger enter : {other.gameObject.tag}");
 			if (! caught) {
 				//print (name + " : CursorTool OnTriggerEnter") ;
 				target = other.gameObject.GetComponent<Interactive> () ;

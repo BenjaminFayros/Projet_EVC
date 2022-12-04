@@ -75,3 +75,6 @@ crashlytics-build.properties
 /[Aa]ssets/Photon/
 /MonoBleedingEdge/
 /
+Collaboration 3D_Data/*
+Collaboration 3D_Data/
+.vsconfig
