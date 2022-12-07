@@ -17,8 +17,8 @@ GameObject:
   - component: {fileID: 6879852377905633647}
   - component: {fileID: 202849349976794166}
   m_Layer: 0
-  m_Name: Cube
-  m_TagString: Untagged
+  m_Name: Cube1
+  m_TagString: cube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136,8 +136,8 @@ MonoBehaviour:
   OwnershipTransfer: 1
   ObservedComponents:
   - {fileID: 6879852377905633647}
-  viewIdField: 4
-  InstantiationId: 4
+  viewIdField: 6
+  InstantiationId: 6
   isRuntimeInstantiated: 0
 --- !u!114 &6879852377905633647
 MonoBehaviour:

@@ -28,7 +28,7 @@ namespace WasaaMP {
 		}
 		
 		public void Catch () {
-			print ("Catch ?") ;
+			//print ("Catch ?") ;
 			if (target != null) {
 				print ("Catch :") ;
 				if ((! caught) && (transform != target.transform) && (target is InteractiveCube)) { // pour ne pas prendre 2 fois l'objet et lui faire perdre son parent
@@ -52,17 +52,17 @@ namespace WasaaMP {
 					PhotonNetwork.SendAllOutgoingCommands () ;
 				}
 			} else {
-				print ("Catch failed") ;
+				//print ("Catch failed") ;
 			}
 		}
 
 		public void Release () {
 			if (caught) {
-				print ("Release :") ;
+				//print ("Release :") ;
 				target.transform.SetParent (oldParent) ;
 				target.photonView.RPC ("ShowReleased", RpcTarget.All) ;
 				PhotonNetwork.SendAllOutgoingCommands () ;
-				print ("Release !") ;
+				//print ("Release !") ;
 				caught = false ;
 			}
 		}
@@ -72,8 +72,9 @@ namespace WasaaMP {
 		}
 
 		void OnTriggerEnter (Collider other) {
+			print($"Cursor Tool trigger enter : {other.gameObject.tag}");
 			if (! caught) {
-				print (name + " : CursorTool OnTriggerEnter") ;
+				//print (name + " : CursorTool OnTriggerEnter") ;
 				target = other.gameObject.GetComponent<Interactive> () ;
 				if (target != null) {
 					target.photonView.RPC ("ShowCatchable", RpcTarget.All) ;
@@ -84,7 +85,7 @@ namespace WasaaMP {
 
 		void OnTriggerExit (Collider other) {
 			if (! caught) {
-				print (name + " : CursorTool OnTriggerExit") ;
+				//print (name + " : CursorTool OnTriggerExit") ;
 				if (target != null) {
 					target.photonView.RPC ("HideCatchable", RpcTarget.All) ;
 					PhotonNetwork.SendAllOutgoingCommands () ;
