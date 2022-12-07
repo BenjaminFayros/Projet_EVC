@@ -85,8 +85,8 @@ MonoBehaviour:
   OwnershipTransfer: 1
   ObservedComponents:
   - {fileID: 873}
-  viewIdField: 1
-  InstantiationId: 1
+  viewIdField: 9
+  InstantiationId: 9
   isRuntimeInstantiated: 0
 --- !u!1 &151
 GameObject:
@@ -333,8 +333,8 @@ MonoBehaviour:
   OwnershipTransfer: 1
   ObservedComponents:
   - {fileID: 4349048798424559730}
-  viewIdField: 2
-  InstantiationId: 2
+  viewIdField: 10
+  InstantiationId: 10
   isRuntimeInstantiated: 0
 --- !u!114 &4349048798424559730
 MonoBehaviour:
@@ -486,8 +486,8 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 877}
   - {fileID: 875}
-  viewIdField: 3
-  InstantiationId: 3
+  viewIdField: 11
+  InstantiationId: 11
   isRuntimeInstantiated: 0
 --- !u!114 &877
 MonoBehaviour:
