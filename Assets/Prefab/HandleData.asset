@@ -18,5 +18,5 @@ MonoBehaviour:
   rightHandle: 0
   frontHandle: 0
   backHandle: 0
-  numberHandle: 2
+  numberHandle: 1
   canMove: 0
