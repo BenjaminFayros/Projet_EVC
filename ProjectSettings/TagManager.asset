@@ -8,6 +8,11 @@ TagManager:
   - cube
   - cursor
   - button
+  - player
+  - cubeInteractive
+  - cubeTriangle
+  - cubeRond
+  - "cubeCarr\xE9"
   layers:
   - Default
   - TransparentFX
